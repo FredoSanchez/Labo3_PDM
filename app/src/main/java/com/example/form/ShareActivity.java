@@ -28,5 +28,9 @@ public class ShareActivity extends AppCompatActivity {
 
 
         mSharedName.setText(data);
+
+        //UTILIZAR SPLIT
+
+
     }
 }
