@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.form.utils.AppConstants;
+import com.example.form.utils.JSON;
 
 public class RecordActivity extends AppCompatActivity {
 
@@ -34,6 +35,16 @@ public class RecordActivity extends AppCompatActivity {
 
         }
 
+        mShareButton.setOnClickListener( v -> {
+
+            Intent mShareIntent = new Intent();
+
+            JSON data = new JSON(mNameView.getText().toString(),mGenderView.getText().toString(),mEmailView.getText().toString(),mPassView.getText().toString());
+            mShareIntent.setType("text/plain");
+            mShareIntent.setAction(Intent.ACTION_SEND);
+            mShareIntent.putExtra(Intent.EXTRA_TEXT, data.getJSON());
+            startActivity(mShareIntent);
+        });
 
     }
 }
