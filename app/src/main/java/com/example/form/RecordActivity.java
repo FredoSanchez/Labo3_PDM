@@ -27,6 +27,7 @@ public class RecordActivity extends AppCompatActivity {
             mEmailView.setText(mIntent.getStringArrayExtra(Intent.EXTRA_TEXT)[2]);
             mPassView.setText(mIntent.getStringArrayExtra(Intent.EXTRA_TEXT)[3]);
             */
+
         }
     }
 }
