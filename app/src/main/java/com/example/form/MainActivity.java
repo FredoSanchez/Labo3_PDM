@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.form.utils.AppConstants;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,21 +44,13 @@ public class MainActivity extends AppCompatActivity {
 
             Intent mIntent = new Intent(MainActivity.this,RecordActivity.class);
 
-            /*
-            List.add(name);
-            List.add(gender);
-            List.add(email);
-            List.add(pass);
-            mIntent.putExtra();
 
-            mIntent.putStringArrayListExtra(Intent.EXTRA_TEXT,List);
-            */
-            lista[0]=name;
-            lista[1]=gender;
-            lista[2]=email;
-            lista[3] = pass;
 
-            mIntent.putExtra(Intent.EXTRA_TEXT,lista);
+            mIntent.putExtra(AppConstants.TEXT_KEY1, name);
+            mIntent.putExtra(AppConstants.TEXT_KEY2, gender);
+            mIntent.putExtra(AppConstants.TEXT_KEY3, email);
+            mIntent.putExtra(AppConstants.TEXT_KEY4, pass);
+
 
 
             startActivity(mIntent);
