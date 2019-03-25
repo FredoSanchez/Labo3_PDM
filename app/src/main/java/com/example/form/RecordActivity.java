@@ -24,13 +24,13 @@ public class RecordActivity extends AppCompatActivity {
         mPassView = findViewById(R.id.tv_pass);
         mShareButton = findViewById(R.id.btn_share);
 
-        Intent mIntent = getIntent();
+        Intent mMainIntent = getIntent();
 
-        if (mIntent!=null){
-            mNameView.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY1));
-            mGenderView.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY2));
-            mEmailView.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY3));
-            mPassView.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY4));
+        if (mMainIntent!=null){
+            mNameView.setText(mMainIntent.getStringExtra(AppConstants.TEXT_KEY1));
+            mGenderView.setText(mMainIntent.getStringExtra(AppConstants.TEXT_KEY2));
+            mEmailView.setText(mMainIntent.getStringExtra(AppConstants.TEXT_KEY3));
+            mPassView.setText(mMainIntent.getStringExtra(AppConstants.TEXT_KEY4));
 
         }
 
