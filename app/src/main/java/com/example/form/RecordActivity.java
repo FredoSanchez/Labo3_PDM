@@ -3,6 +3,7 @@ package com.example.form;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.form.utils.AppConstants;
@@ -10,6 +11,7 @@ import com.example.form.utils.AppConstants;
 public class RecordActivity extends AppCompatActivity {
 
     TextView mNameView, mGenderView, mEmailView, mPassView;
+    Button mShareButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,7 @@ public class RecordActivity extends AppCompatActivity {
         mGenderView = findViewById(R.id.tv_gender);
         mEmailView = findViewById(R.id.tv_email);
         mPassView = findViewById(R.id.tv_pass);
+        mShareButton = findViewById(R.id.btn_share);
 
         Intent mIntent = getIntent();
 
@@ -30,5 +33,7 @@ public class RecordActivity extends AppCompatActivity {
             mPassView.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY4));
 
         }
+
+
     }
 }
